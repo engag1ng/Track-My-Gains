@@ -9,9 +9,9 @@ export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={<Ionicons size={310} name="hourglass" style={styles.headerImage} />}>
+      headerImage={<Ionicons size={310} name="cloud-upload" style={styles.headerImage} />}>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">History</ThemedText>
+        <ThemedText type="title">Backup</ThemedText>
       </ThemedView>
       <ThemedText>Coming soon.</ThemedText>
     </ParallaxScrollView>

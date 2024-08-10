@@ -4,7 +4,7 @@ import React from 'react';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import TabTwoScreen from './explore';
+import TabTwoScreen from './backup';
 
 
 export default function TabLayout() {
@@ -17,29 +17,11 @@ export default function TabLayout() {
         headerShown: false,
       }}>
       <Tabs.Screen
-        name="index"
+        name="profile"
         options={{
-          title: 'Home',
+          title: 'Profile',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="explore"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="exercises"
-        options={{
-          title: 'Exercises',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'barbell' : 'barbell-outline'} color={color} />
           ),
         }}
       />
@@ -53,11 +35,20 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="profile"
+        name="index"
         options={{
-          title: 'Profile',
+          title: 'Home',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+            <TabBarIcon name={focused ? 'heart' : 'heart-outline'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="exercises"
+        options={{
+          title: 'Exercises',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'barbell' : 'barbell-outline'} color={color} />
           ),
         }}
       />
