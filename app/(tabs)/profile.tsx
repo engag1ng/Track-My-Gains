@@ -8,22 +8,26 @@ import { ThemedView } from '@/components/ThemedView';
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={<Ionicons size={310} name="home" style={styles.headerImage}/>}>
       <ThemedView style={styles.titleContainer}>
         <Image source={{ uri:'https://reactnative.dev/img/tiny_logo.png' }} style={{width: 50, height: 50}} />
-        <ThemedText type="title">Insert Username</ThemedText>
+        <ThemedText type="title">*Insert Username*</ThemedText>
       </ThemedView>
-      <ThemedText>Coming soon.</ThemedText>
+      <ThemedText>Started on *Insert Date*.</ThemedText>
+      <ThemedText>Completed workouts: *Insert number*</ThemedText>
+      <ThemedText>Your strongest exercise: *Insert exercise*; PR: *Insert pr weight*</ThemedText>
+      <ThemedText>Last Month:</ThemedText>
+      <Image source={require('../../Calendar Mockup.png')} style={{width: 500, height: 320}} />
     </ParallaxScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   headerImage: {
-    color: '#808080',
-    bottom: 0,
-    left: 0,
+    color: '#0A7EA4',
+    bottom: -90,
+    left: -35,
     position: 'absolute',
   },
   titleContainer: {
