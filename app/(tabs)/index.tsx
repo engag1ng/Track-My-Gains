@@ -1,5 +1,5 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { Image, StyleSheet, Platform, Pressable, Text } from 'react-native';
+import { Image, StyleSheet, Platform, Pressable, Text, ScrollView, View} from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -11,16 +11,19 @@ export default function HomeScreen() {
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={<Ionicons size={310} name="heart" style={styles.headerImage}/>}>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome back *Insert Username*!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <Pressable style={{width: 200, height: 32, backgroundColor: '#A1CEDC', borderRadius: 4}}>
-        <Text style={{fontSize: 20, textAlign: 'center', color: 'black'}}>Start Empty Workout</Text>
-      </Pressable>
-      <ThemedView>
-        <ThemedText style={styles.heading}>Templates</ThemedText>
-      </ThemedView>
+        <ThemedView style={styles.titleContainer}>
+          <ThemedText type="title">Welcome back *Insert Username*!</ThemedText>
+          <HelloWave />
+        </ThemedView>
+        <Pressable style={{width: 200, height: 32, backgroundColor: '#A1CEDC', borderRadius: 4}}>
+          <Text style={{fontSize: 20, textAlign: 'center', color: 'black'}}>Start Empty Workout</Text>
+        </Pressable>
+        <View style={{flexDirection: 'row'}}>
+          <ThemedText style={styles.heading}>Templates</ThemedText>
+          <Pressable style={{width: 25, height: 25, backgroundColor: '#A1CEDC', borderRadius: 4, left: 200}}>
+            <Ionicons name='add' size={25}/>
+          </Pressable>
+        </View>
     </ParallaxScrollView>
   );
 }
@@ -28,7 +31,6 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
-    alignItems: 'center',
     gap: 8,
   },
   headerImage: {
@@ -38,7 +40,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   heading: {
-    fontSize: 28,
+    flexDirection: 'row',
+    gap: 8,
+    fontSize: 20,
     fontWeight: 'bold',
   },
 });

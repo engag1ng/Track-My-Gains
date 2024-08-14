@@ -5,7 +5,7 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
-export default function TabTwoScreen() {
+export default function ProfileScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -18,7 +18,7 @@ export default function TabTwoScreen() {
       <ThemedText>Completed workouts: *Insert number*</ThemedText>
       <ThemedText>Your strongest exercise: *Insert exercise*; PR: *Insert pr weight*</ThemedText>
       <ThemedText>Last Month:</ThemedText>
-      <Image source={require('../../Calendar Mockup.png')} style={{width: 500, height: 320}} />
+      <Image source={require('../../Calendar Mockup.png')} style={{width: 330, height: 210}} />
     </ParallaxScrollView>
   );
 }
